@@ -21,5 +21,5 @@ func CreateExtractParams(c *gin.Context) {
 	}
 
 	// Return the params object in response if everything is fine
-	http.SendOkayData(c, "Request parameters extracted successfully", args)
+	http.RespondOkay(c, "Request parameters extracted successfully", args)
 }
