@@ -9,4 +9,5 @@ func InitRoutes(app *gin.Engine) {
 
 	r.POST("/", CreateExtractParams)
 	r.GET("/", GetExtractParams)
+	r.GET("/:specificPath/", GetSpecificExtractParams)
 }

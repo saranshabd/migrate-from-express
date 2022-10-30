@@ -6,9 +6,9 @@ import (
 )
 
 type GetExtractParamsArgs struct {
-	Arg1 string `form:"arg1" binding:"required"`
-	Arg2 int64  `form:"arg2" binding:"required"`
-	Arg3 bool   `form:"arg3"` // optional
+	Arg1 string `form:"arg1" json:"arg1" binding:"required"`
+	Arg2 int64  `form:"arg2" json:"arg2" binding:"required"`
+	Arg3 bool   `form:"arg3" json:"arg3,omitempty"` // optional
 }
 
 func GetExtractParams(c *gin.Context) {

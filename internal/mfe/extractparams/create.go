@@ -8,7 +8,7 @@ import (
 type CreateExtractParamsArgs struct {
 	Arg1 string `json:"arg1" binding:"required"`
 	Arg2 int64  `json:"arg2" binding:"required"`
-	Arg3 bool   `json:"arg3"` // optional
+	Arg3 bool   `json:"arg3,omitempty"` // optional
 }
 
 func CreateExtractParams(c *gin.Context) {
