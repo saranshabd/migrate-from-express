@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/saranshabd/migrate-from-express/cmd/mfe/http"
 	"os"
 
 	"github.com/gin-gonic/gin"
@@ -13,6 +14,9 @@ func main() {
 
 	// Create a Gin server application with default configurations & middlewares
 	app := gin.Default()
+
+	// Load all the application HTTP endpoints
+	http.InitRoutes(app)
 
 	// Start listening to HTTP requests from the client
 	logger.App.Info().Msgf("Firing it up on %d port number.", configs.Configs.Port)
